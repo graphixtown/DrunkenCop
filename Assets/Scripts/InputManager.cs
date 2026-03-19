@@ -9,16 +9,19 @@ public class InputManager : MonoBehaviour
     [SerializeField] private string _actionMap;
     [SerializeField] private string _move;
     [SerializeField] private string _jump;
+    [SerializeField] private string _sprinting;
     [SerializeField] private string _leftMouse;
     [SerializeField] private string _rightMouse;
 
     private UnityEngine.InputSystem.InputAction moveAction;
     private UnityEngine.InputSystem.InputAction jumpAction;
+    private UnityEngine.InputSystem.InputAction sprintAction;
     private UnityEngine.InputSystem.InputAction leftMouseAction;
     private UnityEngine.InputSystem.InputAction rightMouseAction;
 
     public Vector2 move {  get; private set; }
     public bool jump { get; private set; }
+    public bool sprint {  get; private set; }
     public bool leftMouse { get; private set; }
     public bool rightMouse { get; private set; }
 
@@ -35,6 +38,7 @@ public class InputManager : MonoBehaviour
 
         moveAction = map.FindAction(_move);
         jumpAction = map.FindAction(_jump);
+        sprintAction = map.FindAction(_sprinting);
         leftMouseAction = map.FindAction(_leftMouse);
         rightMouseAction = map.FindAction(_rightMouse);
 
@@ -43,6 +47,9 @@ public class InputManager : MonoBehaviour
 
         jumpAction.performed += ctx => jump = true;
         jumpAction.canceled += ctx => jump = false;
+
+        sprintAction.performed += ctx => sprint = true;
+        sprintAction.canceled += ctx => sprint = false;
 
         leftMouseAction.performed += ctx => leftMouse = true;
         leftMouseAction.canceled += ctx => leftMouse = false;
@@ -54,14 +61,16 @@ public class InputManager : MonoBehaviour
     {
         moveAction.Enable();
         jumpAction.Enable();
-        leftMouseAction?.Enable();
-        rightMouseAction?.Enable();
+        sprintAction.Enable();
+        leftMouseAction.Enable();
+        rightMouseAction.Enable();
     }
     private void OnDisable()
     {
         moveAction.Disable();
         jumpAction.Disable();
-        leftMouseAction?.Disable();
-        rightMouseAction?.Disable();
+        sprintAction.Disable();
+        leftMouseAction.Disable();
+        rightMouseAction.Disable();
     }
 }
