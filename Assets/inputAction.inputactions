@@ -43,9 +43,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Sprinting",
+                    "name": "deadpos",
                     "type": "Button",
-                    "id": "7f4953ae-b883-46af-82db-22befe937169",
+                    "id": "62317366-f74b-4162-9994-cece19744022",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -165,23 +165,23 @@
                 },
                 {
                     "name": "",
-                    "id": "ca4b1e71-fa57-4230-ada5-1e93ffe42b6e",
-                    "path": "<Keyboard>/leftShift",
+                    "id": "16ce7dbb-e8d4-4c48-a014-47fd1e1a2775",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Sprinting",
+                    "action": "deadpos",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "8dbe4c68-70de-4327-809d-e9b840f71bf0",
-                    "path": "<Keyboard>/shift",
+                    "id": "bda5a29a-b1b2-45b6-b6de-dd140e5da085",
+                    "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Sprinting",
+                    "action": "deadpos",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

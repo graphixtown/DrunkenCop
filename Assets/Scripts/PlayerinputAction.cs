@@ -129,9 +129,9 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Sprinting"",
+                    ""name"": ""deadpos"",
                     ""type"": ""Button"",
-                    ""id"": ""7f4953ae-b883-46af-82db-22befe937169"",
+                    ""id"": ""62317366-f74b-4162-9994-cece19744022"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -251,23 +251,23 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ca4b1e71-fa57-4230-ada5-1e93ffe42b6e"",
-                    ""path"": ""<Keyboard>/leftShift"",
+                    ""id"": ""16ce7dbb-e8d4-4c48-a014-47fd1e1a2775"",
+                    ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Sprinting"",
+                    ""action"": ""deadpos"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8dbe4c68-70de-4327-809d-e9b840f71bf0"",
-                    ""path"": ""<Keyboard>/shift"",
+                    ""id"": ""bda5a29a-b1b2-45b6-b6de-dd140e5da085"",
+                    ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Sprinting"",
+                    ""action"": ""deadpos"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -282,7 +282,7 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
         m_PlayerInputs_Jump = m_PlayerInputs.FindAction("Jump", throwIfNotFound: true);
         m_PlayerInputs_leftmouse = m_PlayerInputs.FindAction("leftmouse", throwIfNotFound: true);
         m_PlayerInputs_rightmouse = m_PlayerInputs.FindAction("rightmouse", throwIfNotFound: true);
-        m_PlayerInputs_Sprinting = m_PlayerInputs.FindAction("Sprinting", throwIfNotFound: true);
+        m_PlayerInputs_deadpos = m_PlayerInputs.FindAction("deadpos", throwIfNotFound: true);
     }
 
     ~@PlayerInputAction()
@@ -367,7 +367,7 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerInputs_Jump;
     private readonly InputAction m_PlayerInputs_leftmouse;
     private readonly InputAction m_PlayerInputs_rightmouse;
-    private readonly InputAction m_PlayerInputs_Sprinting;
+    private readonly InputAction m_PlayerInputs_deadpos;
     /// <summary>
     /// Provides access to input actions defined in input action map "PlayerInputs".
     /// </summary>
@@ -396,9 +396,9 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @rightmouse => m_Wrapper.m_PlayerInputs_rightmouse;
         /// <summary>
-        /// Provides access to the underlying input action "PlayerInputs/Sprinting".
+        /// Provides access to the underlying input action "PlayerInputs/deadpos".
         /// </summary>
-        public InputAction @Sprinting => m_Wrapper.m_PlayerInputs_Sprinting;
+        public InputAction @deadpos => m_Wrapper.m_PlayerInputs_deadpos;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -437,9 +437,9 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
             @rightmouse.started += instance.OnRightmouse;
             @rightmouse.performed += instance.OnRightmouse;
             @rightmouse.canceled += instance.OnRightmouse;
-            @Sprinting.started += instance.OnSprinting;
-            @Sprinting.performed += instance.OnSprinting;
-            @Sprinting.canceled += instance.OnSprinting;
+            @deadpos.started += instance.OnDeadpos;
+            @deadpos.performed += instance.OnDeadpos;
+            @deadpos.canceled += instance.OnDeadpos;
         }
 
         /// <summary>
@@ -463,9 +463,9 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
             @rightmouse.started -= instance.OnRightmouse;
             @rightmouse.performed -= instance.OnRightmouse;
             @rightmouse.canceled -= instance.OnRightmouse;
-            @Sprinting.started -= instance.OnSprinting;
-            @Sprinting.performed -= instance.OnSprinting;
-            @Sprinting.canceled -= instance.OnSprinting;
+            @deadpos.started -= instance.OnDeadpos;
+            @deadpos.performed -= instance.OnDeadpos;
+            @deadpos.canceled -= instance.OnDeadpos;
         }
 
         /// <summary>
@@ -535,11 +535,11 @@ public partial class @PlayerInputAction: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnRightmouse(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Sprinting" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "deadpos" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnSprinting(InputAction.CallbackContext context);
+        void OnDeadpos(InputAction.CallbackContext context);
     }
 }

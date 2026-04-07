@@ -9,8 +9,11 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] private LayerMask groundMask;
     private Animator animator;
 
-    private string MOVE_FORWARD = "moveForward", MOVE_BACKWARD = "moveBackward", JUMPING = "jumping";
+    private string MOVE_FORWARD = "moveForward",
+                   MOVE_BACKWARD = "moveBackward",
+                   JUMPING = "jumping";
 
+    private bool isCrouching;
     private bool awayFromGround;
     private void Start()
     {
@@ -22,23 +25,35 @@ public class PlayerAnimation : MonoBehaviour
     }
     private void LateUpdate()
     {
-        if (InputManager.instance.move.x > 0) animator.SetBool(MOVE_FORWARD, true);
-        else if (InputManager.instance.move.x < 0) animator.SetBool(MOVE_BACKWARD, true);
-        else
-        {
-            animator.SetBool(MOVE_FORWARD, false);
-            animator.SetBool(MOVE_BACKWARD, false);
-        }
 
-        if(!awayFromGround)
-        { 
-            animator.SetBool(JUMPING, true);
-            animator.SetBool(MOVE_FORWARD, false);
-            animator.SetBool(MOVE_BACKWARD, false);
-        }
-        else if(awayFromGround)
+        if (!InputManager.instance.dead)
         {
-            animator.SetBool(JUMPING, false);
+            if (InputManager.instance.move.x > 0)
+            {
+                animator.SetBool(MOVE_FORWARD, true);
+                animator.SetBool(MOVE_BACKWARD, false);
+            }
+            else if (InputManager.instance.move.x < 0)
+            {
+                animator.SetBool(MOVE_BACKWARD, true);
+                animator.SetBool(MOVE_FORWARD, false);
+            }
+            else
+            {
+                animator.SetBool(MOVE_FORWARD, false);
+                animator.SetBool(MOVE_BACKWARD, false);
+            }
+
+            if (!awayFromGround)
+            {
+                animator.SetBool(JUMPING, true);
+                animator.SetBool(MOVE_FORWARD, false);
+                animator.SetBool(MOVE_BACKWARD, false);
+            }
+            else if (awayFromGround)
+            {
+                animator.SetBool(JUMPING, false);
+            }
         }
     }
     private void OnDrawGizmos()

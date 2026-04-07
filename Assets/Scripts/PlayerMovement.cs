@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveForce;
-    [SerializeField] private float sprintForce;
     [SerializeField] private float jumpForce;
     [SerializeField] private float feetRadius;
 
@@ -11,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector3 feetOffset;
     [SerializeField] private LayerMask groundLayer;
 
-    private float currentMoveForce;
     private Rigidbody2D hips;
     private Vector2 move;
 
@@ -22,11 +20,6 @@ public class PlayerMovement : MonoBehaviour
     {
         hips = transform.Find("Hips").GetComponent<Rigidbody2D>();
     }
-    private void Update()
-    {
-        if (InputManager.instance.sprint){currentMoveForce = sprintForce;}
-        else{currentMoveForce = moveForce;}
-    }
     private void FixedUpdate()
     {
         _isLeftonGround = Physics2D.OverlapCircle(leftFeet.transform.position + feetOffset, feetRadius, groundLayer);
@@ -34,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         _isUponGround = _isLeftonGround || _isRightonGround;
 
         move = InputManager.instance.move;
-        hips.AddForce(move * currentMoveForce * Time.deltaTime);
+        hips.AddForce(move * moveForce * Time.deltaTime);
 
         var jumpButton = InputManager.instance.jump;
         if (jumpButton && _isUponGround)

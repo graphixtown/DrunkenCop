@@ -6,6 +6,13 @@ public class Balance : MonoBehaviour
     [SerializeField] private float targetAngle, rotateForce;
     private void FixedUpdate()
     {
-        rb.MoveRotation(Mathf.Lerp(rb.rotation, targetAngle, rotateForce * Time.deltaTime));
+        if (InputManager.instance.dead)
+        {
+            if (gameObject.CompareTag("Player"))
+            {
+                rb.MoveRotation(Mathf.Lerp(rb.rotation, targetAngle, 0 * Time.deltaTime));
+            }
+        }
+        else rb.MoveRotation(Mathf.Lerp(rb.rotation, targetAngle, rotateForce * Time.deltaTime));
     }
 }
