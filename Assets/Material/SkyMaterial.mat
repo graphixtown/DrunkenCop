@@ -53,15 +53,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Color01Influence: 3.74
+    - _Color01Influence: 2.16
     - _Color02Influence: 0.32
     - _EnableExternalAlpha: 0
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Color01: {r: 0, g: 0.09603957, b: 0.4392157, a: 0}
+    - _Color01: {r: 0.02202742, g: 0.037746985, b: 0.084905684, a: 0}
     - _Color01Influence: {r: 0, g: 0, b: 0, a: 0}
-    - _Color02: {r: 0, g: 0.032345008, b: 1.0039216, a: 0}
+    - _Color02: {r: 0, g: 0, b: 0.0754717, a: 0}
     - _Color02Influence: {r: 0, g: 0, b: 0, a: 0}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

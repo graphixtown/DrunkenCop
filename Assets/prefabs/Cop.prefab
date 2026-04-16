@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 8409183154131842}
   - component: {fileID: 3391193906515531433}
   - component: {fileID: 7899863229180768565}
+  - component: {fileID: 721164736032994310}
   m_Layer: 0
   m_Name: Hips
   m_TagString: Player
@@ -218,7 +219,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 5427481201439270459, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -328,7 +329,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3391193906515531433}
   targetAngle: 0
-  rotateForce: 60
+  rotateForce: 30
+--- !u!58 &721164736032994310
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2230368983658179857}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0.29636145}
+  m_Radius: 2.5283418
 --- !u!1 &2768917272295364080
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,7 +557,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.015803456, y: 0.39282763}
-  m_ConnectedAnchor: {x: 0.05919656, y: -0.35217226}
+  m_ConnectedAnchor: {x: 0.05919659, y: -0.35217226}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -624,7 +661,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 14
+  m_SortingOrder: 1
   m_Sprite: {fileID: 449505943102075700, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -715,7 +752,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.05386722, y: -0.60750234}
-  m_ConnectedAnchor: {x: 0.008867266, y: 0.05749762}
+  m_ConnectedAnchor: {x: 0.008867264, y: 0.05749762}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -805,7 +842,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1100927383315134161, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -906,7 +943,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.006985426, y: -0.076946974}
-  m_ConnectedAnchor: {x: -0.2819854, y: -0.22294688}
+  m_ConnectedAnchor: {x: -0.28198534, y: -0.22294688}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -930,7 +967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 371163082162225223}
   targetAngle: 0
-  rotateForce: 70
+  rotateForce: 30
 --- !u!1 &3091029112440257746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,7 +1046,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 0
   m_Sprite: {fileID: -3225297561234879625, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1110,7 +1147,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.008349806, y: -0.03172934}
-  m_ConnectedAnchor: {x: 0.021650165, y: 0.75827086}
+  m_ConnectedAnchor: {x: 0.021650136, y: 0.75827086}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1199,7 +1236,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 12
+  m_SortingOrder: 1
   m_Sprite: {fileID: 183707487865386852, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1311,7 +1348,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.0023459792, y: 0.39410704}
-  m_ConnectedAnchor: {x: -0.027654082, y: -0.34589297}
+  m_ConnectedAnchor: {x: -0.027653933, y: -0.3458929}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1416,7 +1453,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 1
   m_Sprite: {fileID: -8856010509684537686, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1524,7 +1561,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.034457684, y: 0.03717804}
-  m_ConnectedAnchor: {x: 0.023457676, y: -0.9648218}
+  m_ConnectedAnchor: {x: 0.023457646, y: -0.9648216}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1548,7 +1585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7610669178601520506}
   targetAngle: 0
-  rotateForce: 80
+  rotateForce: 40
 --- !u!1 &4441996939929541421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1628,7 +1665,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1331517976903611993, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1881,7 +1918,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.30167136, y: 0.020111442}
-  m_ConnectedAnchor: {x: -0.0056713223, y: -0.4306885}
+  m_ConnectedAnchor: {x: -0.005671382, y: -0.43068838}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2018,7 +2055,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.30167136, y: 0.020111442}
-  m_ConnectedAnchor: {x: 0.032328606, y: -0.4358884}
+  m_ConnectedAnchor: {x: 0.032328635, y: -0.4358883}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2120,7 +2157,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_Sprite: {fileID: 5718891569257560755, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2227,7 +2264,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.008414298, y: 0.02145052}
-  m_ConnectedAnchor: {x: 0.022414267, y: -0.96554947}
+  m_ConnectedAnchor: {x: 0.022414207, y: -0.9655497}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2251,7 +2288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6651083450718793253}
   targetAngle: 0
-  rotateForce: 80
+  rotateForce: 40
 --- !u!1 &7195781312775524564
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,7 +2368,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 13
+  m_SortingOrder: 1
   m_Sprite: {fileID: -7069656893234266676, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2549,7 +2586,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2839859822561736551, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2674,7 +2711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1819213689324996890}
   targetAngle: 0
-  rotateForce: 65
+  rotateForce: 25
 --- !u!1 &7736999780347028565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2753,7 +2790,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7926361535933937049, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2955,7 +2992,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 1
   m_Sprite: {fileID: 5201309861761673482, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3056,7 +3093,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -0.01000005, y: -0.8970001}
+  m_ConnectedAnchor: {x: -0.01000011, y: -0.8970001}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -3080,7 +3117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6371931315522677077}
   targetAngle: 0
-  rotateForce: 65
+  rotateForce: 25
 --- !u!1 &9004818543576148847
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,7 +3198,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: -4262644050937011265, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3286,4 +3323,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3552588855252965740}
   targetAngle: 0
-  rotateForce: 70
+  rotateForce: 30
