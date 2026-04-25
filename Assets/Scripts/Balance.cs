@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Balance : MonoBehaviour
@@ -13,6 +14,11 @@ public class Balance : MonoBehaviour
                 rb.MoveRotation(Mathf.Lerp(rb.rotation, targetAngle, 0 * Time.deltaTime));
             }
         }
-        else rb.MoveRotation(Mathf.Lerp(rb.rotation, targetAngle, rotateForce * Time.deltaTime));
+        else
+        {
+            rb.MoveRotation(Mathf.Lerp(rb.rotation, targetAngle, rotateForce * Time.deltaTime));
+        }
     }
 }
+
+

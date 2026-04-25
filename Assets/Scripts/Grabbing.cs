@@ -24,6 +24,7 @@ public class Grabbing : MonoBehaviour
         {
             if(rb != null)
             {
+                PlayerMovement.Instance.playGrabbing();
                 FixedJoint2D FJ = transform.gameObject.AddComponent(typeof(FixedJoint2D)) as FixedJoint2D;
                 FJ.connectedBody = rb;
             }
