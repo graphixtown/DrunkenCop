@@ -7,7 +7,7 @@ public class Finishline : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            LevelLoader.Instance.sceneTransition();
         }
     }
 }

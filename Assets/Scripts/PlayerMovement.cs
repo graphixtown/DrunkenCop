@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveForce;
     [SerializeField] private float jumpForce;
     [SerializeField] private float feetRadius;
-
+    [SerializeField] private Balance balance;
     [SerializeField] private GameObject leftFeet, rightFeet;
     [SerializeField] private Vector3 feetOffset;
     [SerializeField] private LayerMask groundLayer;
@@ -50,10 +50,13 @@ public class PlayerMovement : MonoBehaviour
         hips.AddForce(move * moveForce * Time.deltaTime);
 
         var jumpButton = InputManager.instance.jump;
-        if (jumpButton && _isUponGround)
+        if (jumpButton && _isUponGround && !balance.cannotJump)
         {
             audioSource.PlayOneShot(jumpSound);
             hips.AddRelativeForceY(jumpForce * Time.deltaTime, ForceMode2D.Impulse);
+        }if(hips.linearVelocity.y > 12)
+        {
+            hips.linearVelocityY = 0;
         }
     }
     private void OnDrawGizmos()

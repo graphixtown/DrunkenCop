@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4636064720914876898}
   - component: {fileID: 4565453671157337004}
   - component: {fileID: 4979447093291323901}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cop
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -93,8 +93,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveForce: 250
-  jumpForce: 1200
+  jumpForce: 3000
   feetRadius: 0.2
+  balance: {fileID: 5899270802983657230}
   leftFeet: {fileID: 4344505545246062788}
   rightFeet: {fileID: 6229473782463586692}
   feetOffset: {x: 0.15, y: -0.15, z: 0}
@@ -160,7 +161,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.261
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -256,7 +257,7 @@ GameObject:
   - component: {fileID: 3391193906515531433}
   - component: {fileID: 7899863229180768565}
   - component: {fileID: 721164736032994310}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hips
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -321,7 +322,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 5427481201439270459, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -430,8 +431,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3391193906515531433}
+  cannotJump: 0
   targetAngle: 0
-  rotateForce: 30
+  rotateForce: 60
 --- !u!58 &721164736032994310
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -482,7 +484,7 @@ GameObject:
   - component: {fileID: 1532583886643873589}
   - component: {fileID: 8223352952953276339}
   - component: {fileID: 5480831376496608235}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right_Forearms
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -547,7 +549,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -3
   m_Sprite: {fileID: -6233207195800030873, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -681,7 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86cf4b5e0471b374a86d16b79878c55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 60
   currentBody: {fileID: 1532583886643873589}
   cam: {fileID: 0}
   inputAction: {fileID: 5077559297155268176, guid: 80b2834eda759b847ad6830f2a5bf2c2, type: 3}
@@ -698,7 +700,7 @@ GameObject:
   - component: {fileID: 5696106968401564263}
   - component: {fileID: 2251532215590984638}
   - component: {fileID: 6636170642194443012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Head
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -854,7 +856,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.05386722, y: -0.60750234}
-  m_ConnectedAnchor: {x: 0.008867502, y: 0.05749762}
+  m_ConnectedAnchor: {x: 0.008867264, y: 0.05749762}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -878,7 +880,7 @@ GameObject:
   - component: {fileID: 371163082162225223}
   - component: {fileID: 5589885940087532816}
   - component: {fileID: 5899270802983657230}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left_Thigh
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -944,7 +946,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1100927383315134161, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1068,8 +1070,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 371163082162225223}
+  cannotJump: 0
   targetAngle: 0
-  rotateForce: 30
+  rotateForce: 70
 --- !u!1 &3091029112440257746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,7 +1086,7 @@ GameObject:
   - component: {fileID: 1123566339526532133}
   - component: {fileID: 3896888924468219605}
   - component: {fileID: 4223673659537867282}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Neck
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1249,7 +1252,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.008349806, y: -0.03172934}
-  m_ConnectedAnchor: {x: 0.021650076, y: 0.75827086}
+  m_ConnectedAnchor: {x: 0.021651268, y: 0.75827086}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1273,7 +1276,7 @@ GameObject:
   - component: {fileID: 2752730791512080311}
   - component: {fileID: 7552979009622446957}
   - component: {fileID: 1740305512998194074}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: left _Forearms
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1338,7 +1341,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 183707487865386852, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1450,7 +1453,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.0023459792, y: 0.39410704}
-  m_ConnectedAnchor: {x: -0.027653933, y: -0.3458929}
+  m_ConnectedAnchor: {x: -0.027654648, y: -0.3458929}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1472,7 +1475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86cf4b5e0471b374a86d16b79878c55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 60
   currentBody: {fileID: 2752730791512080311}
   cam: {fileID: 0}
   inputAction: {fileID: 1420302093650806829, guid: 80b2834eda759b847ad6830f2a5bf2c2, type: 3}
@@ -1490,7 +1493,7 @@ GameObject:
   - component: {fileID: 7610669178601520506}
   - component: {fileID: 1553840170333099405}
   - component: {fileID: 7194132982817072569}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left_Feet
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1555,7 +1558,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: -8856010509684537686, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1663,7 +1666,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.034457684, y: 0.03717804}
-  m_ConnectedAnchor: {x: 0.023457766, y: -0.9648216}
+  m_ConnectedAnchor: {x: 0.023457527, y: -0.9648218}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1686,8 +1689,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7610669178601520506}
+  cannotJump: 0
   targetAngle: 0
-  rotateForce: 40
+  rotateForce: 75
 --- !u!1 &4441996939929541421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,7 +1706,7 @@ GameObject:
   - component: {fileID: 8048344018543071658}
   - component: {fileID: 6755775011292292479}
   - component: {fileID: 2111527186096935135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right_Upper_Arm
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1767,7 +1771,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: -2
   m_Sprite: {fileID: 1331517976903611993, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1880,7 +1884,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.03386438, y: 0.32735634}
-  m_ConnectedAnchor: {x: 0.44613552, y: 0.46235633}
+  m_ConnectedAnchor: {x: 0.44613647, y: 0.46235633}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -1902,7 +1906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86cf4b5e0471b374a86d16b79878c55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 60
   currentBody: {fileID: 8048344018543071658}
   cam: {fileID: 0}
   inputAction: {fileID: 5077559297155268176, guid: 80b2834eda759b847ad6830f2a5bf2c2, type: 3}
@@ -1919,7 +1923,7 @@ GameObject:
   - component: {fileID: 8196335333279776120}
   - component: {fileID: 367714829763803693}
   - component: {fileID: 8529207702769124089}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LeftFist
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2020,7 +2024,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.30167136, y: 0.020111442}
-  m_ConnectedAnchor: {x: -0.0056712627, y: -0.43068838}
+  m_ConnectedAnchor: {x: -0.0056705475, y: -0.43068838}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2056,7 +2060,7 @@ GameObject:
   - component: {fileID: 1984752843686656577}
   - component: {fileID: 5285248785020918125}
   - component: {fileID: 4460778162252237397}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RightFist
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2194,7 +2198,7 @@ GameObject:
   - component: {fileID: 6651083450718793253}
   - component: {fileID: 6575428988484996452}
   - component: {fileID: 515409715287715616}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right_Feet
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2259,7 +2263,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 5718891569257560755, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2366,7 +2370,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.008414298, y: 0.02145052}
-  m_ConnectedAnchor: {x: 0.022414207, y: -0.9655497}
+  m_ConnectedAnchor: {x: 0.022414207, y: -0.96554947}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2389,8 +2393,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6651083450718793253}
+  cannotJump: 0
   targetAngle: 0
-  rotateForce: 40
+  rotateForce: 75
 --- !u!1 &7195781312775524564
 GameObject:
   m_ObjectHideFlags: 0
@@ -2405,7 +2410,7 @@ GameObject:
   - component: {fileID: 8984320981899938102}
   - component: {fileID: 2037057421874236502}
   - component: {fileID: 5793009616180714700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left_Upper_Arm
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2470,7 +2475,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -7069656893234266676, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2582,7 +2587,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.018859386, y: 0.3658738}
-  m_ConnectedAnchor: {x: -0.45614052, y: 0.47587395}
+  m_ConnectedAnchor: {x: -0.45613956, y: 0.47587395}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2604,7 +2609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86cf4b5e0471b374a86d16b79878c55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 60
   currentBody: {fileID: 8984320981899938102}
   cam: {fileID: 0}
   inputAction: {fileID: 1420302093650806829, guid: 80b2834eda759b847ad6830f2a5bf2c2, type: 3}
@@ -2622,7 +2627,7 @@ GameObject:
   - component: {fileID: 1819213689324996890}
   - component: {fileID: 4657470950378554199}
   - component: {fileID: 5617472337357960105}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right_Calves
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2688,7 +2693,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 2839859822561736551, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2789,7 +2794,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.0149998665, y: -0.8870001}
+  m_ConnectedAnchor: {x: 0.01499939, y: -0.8870001}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -2812,8 +2817,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1819213689324996890}
+  cannotJump: 0
   targetAngle: 0
-  rotateForce: 25
+  rotateForce: 70
 --- !u!1 &7736999780347028565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2827,7 +2833,7 @@ GameObject:
   - component: {fileID: 53894008631376353}
   - component: {fileID: 8407831389177550098}
   - component: {fileID: 7514276676423622538}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Torso
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2892,7 +2898,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7926361535933937049, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3028,7 +3034,7 @@ GameObject:
   - component: {fileID: 6371931315522677077}
   - component: {fileID: 8289809518526193652}
   - component: {fileID: 4796631916913010262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left_Calves
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3094,7 +3100,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 5201309861761673482, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3218,8 +3224,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6371931315522677077}
+  cannotJump: 0
   targetAngle: 0
-  rotateForce: 25
+  rotateForce: 70
 --- !u!1 &9004818543576148847
 GameObject:
   m_ObjectHideFlags: 0
@@ -3234,7 +3241,7 @@ GameObject:
   - component: {fileID: 3552588855252965740}
   - component: {fileID: 3066631496963680157}
   - component: {fileID: 1312863806997305279}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right_Thigh
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -3300,7 +3307,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -4262644050937011265, guid: 9e65d6699b6c35042adc92a763119d24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3401,7 +3408,7 @@ HingeJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.0069767833, y: -0.038551807}
-  m_ConnectedAnchor: {x: 0.27697706, y: -0.1945517}
+  m_ConnectedAnchor: {x: 0.27697754, y: -0.1945517}
   m_UseConnectedAnchor: 1
   m_UseMotor: 0
   m_Motor:
@@ -3424,5 +3431,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 3552588855252965740}
+  cannotJump: 0
   targetAngle: 0
-  rotateForce: 30
+  rotateForce: 70

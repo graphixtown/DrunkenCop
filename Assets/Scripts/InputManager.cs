@@ -74,4 +74,6 @@ public class InputManager : MonoBehaviour
         leftMouseAction.Disable();
         rightMouseAction.Disable();
     }
+    public void callEnable() { OnEnable(); }
+    public void callDisable() { OnDisable(); }
 }

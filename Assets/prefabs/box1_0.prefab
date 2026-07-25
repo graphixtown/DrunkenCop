@@ -176,7 +176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be86a2c34d64f944680aa4154fa5050e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 2393057211424799001}
+  collided: 0
+  wasCollided: 0
+  inSpeed: 0
+  body: {fileID: 2393057211424799001}
   audioSource: {fileID: 5611276891272186761}
   clip: {fileID: 8300000, guid: 1d113522dd2f26e43ae5258186baef66, type: 3}
 --- !u!82 &5611276891272186761

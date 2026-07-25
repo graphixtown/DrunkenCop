@@ -1,11 +1,33 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
+    public static MenuManager Instance;
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip buttonHoverSound;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+    }
+    private void Start()
+    {
+        Cursor.visible = false;
+        
+    }
+    public void buttonHover()
+    {
+        audioSource.PlayOneShot(buttonHoverSound);
+    }
     public void PlayButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        LevelLoader.Instance.sceneTransition();
     }
     public void QuitButton()
     {

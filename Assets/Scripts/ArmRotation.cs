@@ -1,6 +1,8 @@
 using System;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class ArmRotation : MonoBehaviour
 {
@@ -15,9 +17,16 @@ public class ArmRotation : MonoBehaviour
         Vector3 difference = transform.position - playerPos;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
 
-        if (inputAction.action.ReadValue<float>() > 0)
+        if(SceneManager.GetActiveScene().buildIndex == 0)
         {
             currentBody.MoveRotation(Mathf.LerpAngle(currentBody.rotation, rotationZ - 90, speed * Time.deltaTime));
+        }
+        else
+        {
+            if (inputAction.action.ReadValue<float>() > 0)
+            {
+                currentBody.MoveRotation(Mathf.LerpAngle(currentBody.rotation, rotationZ - 90, speed * Time.deltaTime));
+            }
         }
     }
 }
